@@ -1,6 +1,6 @@
 window.onload = function() { document.querySelector(".preloader").style.display = "none"; }
 
-const GitInfo = {
+const Covid19 = {
     data() {
         return {
             country: "",
@@ -17,8 +17,8 @@ const GitInfo = {
     },
     computed: {
         filteredData() {
-            return this.covidInfoAll.filter(item => item.country.startsWith(this.country));
+            return this.covidInfoAll.filter(item => item.country.toLowerCase().startsWith(this.country.toLowerCase()));
         }
     }
 }
-Vue.createApp(GitInfo).mount("#covid-update");
+Vue.createApp(Covid19).mount("#covid-update");
