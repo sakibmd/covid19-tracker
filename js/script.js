@@ -18,6 +18,9 @@ const Covid19 = {
     computed: {
         filteredData() {
             return this.covidInfoAll.filter(item => item.country.toLowerCase().startsWith(this.country.toLowerCase()));
+        },
+        now() {
+            return Date.now();
         }
     }
 }
